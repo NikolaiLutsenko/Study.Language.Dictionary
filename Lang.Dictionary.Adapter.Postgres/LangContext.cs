@@ -1,4 +1,5 @@
 ﻿using Lang.Dictionary.Adapter.Postgres.Users;
+using Lang.Dictionary.Adapter.Postgres.WordLists;
 using Lang.Dictionary.Adapter.Postgres.Words;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,8 @@ namespace Lang.Dictionary.Adapter.Postgres
 
         public DbSet<UserBox> Users { get; set; }
 
+        public DbSet<WordListDal> WordsList { get; set; }
+
         public LangContext(DbContextOptions<LangContext> options) : base(options)
         {
         }
@@ -18,6 +21,8 @@ namespace Lang.Dictionary.Adapter.Postgres
         {
             modelBuilder.ApplyConfiguration(new WordEntityConfiguration());
             modelBuilder.ApplyConfiguration(new UserEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new WordListEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new WordToWordListEntityTypeConfiguration());
         }
     }
 

@@ -1,10 +1,13 @@
-﻿using Lang.Dictionary.Adapter.Postgres.Words;
+﻿using Lang.Dictionary.Adapter.Postgres.WordLists;
+using Lang.Dictionary.Adapter.Postgres.Words;
 
 namespace Lang.Dictionary.Adapter.Postgres.Users
 {
     internal class UserBox : EntityBox<Guid, UserDal>
     {
-        public IEnumerable<WordDal> Words { get; set; }
+        public ICollection<WordDal> Words { get; set; }
+
+        public ICollection<WordListDal> WordLists { get; set; }
     }
 
     internal class UserDal

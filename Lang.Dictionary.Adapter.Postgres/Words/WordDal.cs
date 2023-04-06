@@ -1,4 +1,5 @@
 ﻿using Lang.Dictionary.Adapter.Postgres.Users;
+using Lang.Dictionary.Adapter.Postgres.WordLists;
 
 namespace Lang.Dictionary.Adapter.Postgres.Words
 {
@@ -15,6 +16,8 @@ namespace Lang.Dictionary.Adapter.Postgres.Words
         public DateTimeOffset CreatedAt { get; set; }
 
         public UserBox? Owner { get; set; }
+
+        public ICollection<WordToWordListDal>? WordToWordLists { get; set; }
     }
 
     internal class TranslatedWordDal
