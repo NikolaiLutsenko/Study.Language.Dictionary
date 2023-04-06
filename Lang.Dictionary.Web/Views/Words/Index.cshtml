@@ -1,0 +1,36 @@
+﻿@model Lang.Dictionary.Web.Models.WordsViewModel
+
+@{
+    ViewData["Title"] = "Словник";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="Create">Додати нове слово</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Слово</th>
+            <th>Переклад</th>
+            <th>Дія</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Words) {
+            <tr>
+                <td>
+                    @item.From.Value
+                </td>
+                <td>
+                    @item.To.Value
+                </td>
+                <td>
+                    @Html.ActionLink("Редагувати", "Edit", new { id= item.Id })
+                    @Html.ActionLink("Видалити", "Delete", new { id= item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

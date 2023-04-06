@@ -1,0 +1,39 @@
+﻿@using Lang.Dictionary.App.Settings;
+@using Lang.Dictionary.Web.Extensions;
+@using Microsoft.Extensions.Options;
+@model Lang.Dictionary.Web.Models.CreateWordViewModel
+@inject IOptions<LanguageSettings> language
+@{
+    ViewData["Title"] = Model.Id.HasValue
+        ? "Редагувати слово"
+        : "Додати слово";
+
+    var submitButtonText = Model.Id.HasValue
+        ? "Зберегти"
+        : "Додати";
+}
+
+<form method="post" asp-action="Create">
+    @Html.HiddenFor(x => x.Id)
+    <div class="form-group mb-3">
+        <label asp-for="FromLanguageId"></label>
+        <select name="FromLanguageId" class="form-control" asp-items="@ViewBag.FromLanguages"></select>
+        <span asp-validation-for="FromLanguageId" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="FromValue"></label>
+        <input asp-for="FromValue" class="form-control" />
+        <span asp-validation-for="FromValue" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="ToLanguageId"></label>
+        <select name="ToLanguageId" class="form-control" asp-items="@ViewBag.ToLanguages"></select>
+        <span asp-validation-for="ToLanguageId" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="ToValue"></label>
+        <input asp-for="ToValue" class="form-control" />
+        <span asp-validation-for="ToValue" class="text-danger"></span>
+    </div>
+    <input type="submit" value="@submitButtonText" class="btn btn-primary" />
+</form>

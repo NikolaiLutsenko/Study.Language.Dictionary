@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lang.Dictionary.Web", "Lang.Dictionary.Web.csproj", "{F5853357-1D89-40A3-86F7-FC984F1DF8A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lang.Dictionary.App", "..\Lang.Dictionary.App\Lang.Dictionary.App.csproj", "{C5427C48-1CE8-4D60-B430-A9ADA117E87B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lang.Dictionary.Adapter.Postgres", "..\Lang.Dictionary.Adapter.Postgres\Lang.Dictionary.Adapter.Postgres.csproj", "{815B3814-75CD-4623-994B-C6C55B535F6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5853357-1D89-40A3-86F7-FC984F1DF8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5853357-1D89-40A3-86F7-FC984F1DF8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5853357-1D89-40A3-86F7-FC984F1DF8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5853357-1D89-40A3-86F7-FC984F1DF8A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5427C48-1CE8-4D60-B430-A9ADA117E87B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5427C48-1CE8-4D60-B430-A9ADA117E87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5427C48-1CE8-4D60-B430-A9ADA117E87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5427C48-1CE8-4D60-B430-A9ADA117E87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{815B3814-75CD-4623-994B-C6C55B535F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815B3814-75CD-4623-994B-C6C55B535F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815B3814-75CD-4623-994B-C6C55B535F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815B3814-75CD-4623-994B-C6C55B535F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24BFE055-9092-4FD2-B5D3-495965B0D052}
+	EndGlobalSection
+EndGlobal

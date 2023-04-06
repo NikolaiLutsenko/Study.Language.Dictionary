@@ -1,0 +1,21 @@
+﻿@using Lang.Dictionary.Web.Models.Accounts;
+@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Логін";
+}
+
+<form method="post">
+    @Html.ValidationSummary(excludePropertyErrors: true)
+    <div class="form-group">
+        @Html.DisplayNameFor(x => x.Email)
+        @Html.EditorFor(x => x.Email)
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+    <div class="form-group">
+        @Html.DisplayNameFor(x => x.Password)
+        @Html.EditorFor(x => x.Password)
+        @Html.ValidationMessageFor(x => x.Password)
+    </div>
+    <input type="submit" value="Увійти" />
+</form>
