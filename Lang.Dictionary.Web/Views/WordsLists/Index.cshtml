@@ -1,0 +1,35 @@
+﻿@model Lang.Dictionary.Web.Models.WordsLists.WordsListsViewModel
+
+@{
+    ViewData["Title"] = "Списки";
+}
+
+<p>
+    <a asp-action="Create">Створити новий список</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Назва</th>
+            <th>Дата створення</th>
+            <th>Дія</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.WordsLists)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.CreatedAt
+                </td>
+                <td>
+                    @Html.ActionLink("Редагувати", "Edit", new { id= item.Id })
+                    @Html.ActionLink("Видалити", "Delete", new { id= item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

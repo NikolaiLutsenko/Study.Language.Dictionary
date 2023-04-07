@@ -10,7 +10,8 @@ namespace Lang.Dictionary.App
         {
             services
                 .AddScoped<WordsService>()
-                .AddScoped<UserService>();
+                .AddScoped<UserService>()
+                .AddScoped<WordsListsService>();
 
             return services;
         }

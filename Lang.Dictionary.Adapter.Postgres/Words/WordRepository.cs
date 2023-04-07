@@ -48,7 +48,7 @@ namespace Lang.Dictionary.Adapter.Postgres.Words
         {
             var dals = await _context.Users
                 .Include(user => user.Words)
-                .Where(user => user.Id == (ownerId ?? user.Id))
+                .Where(user => user.Id == ownerId)
                 .SelectMany(x => x.Words)
                 .ToArrayAsync();
 
